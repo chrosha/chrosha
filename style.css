@@ -631,29 +631,26 @@ h3 {
 
 /* Form AJAX Success State */
 .contact-form-container.form-success-state {
-    border: 2px solid #06C167;
-    background-color: rgba(6, 193, 103, 0.05);
-    box-shadow: 0 0 20px rgba(6, 193, 103, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     transition: all 0.5s ease;
 }
 
 .form-result {
-    margin-top: 20px;
+    margin-top: 15px;
     text-align: center;
-    font-weight: 600;
-    padding: 15px;
-    border-radius: var(--border-radius);
+    font-weight: 400;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
     transition: all 0.3s ease;
 }
 
 .form-result.success {
-    color: #06C167;
-    background-color: rgba(6, 193, 103, 0.1);
+    color: var(--text-main);
 }
 
 .form-result.error {
     color: var(--accent-red);
-    background-color: rgba(217, 56, 30, 0.1);
 }
 
 .hidden {
