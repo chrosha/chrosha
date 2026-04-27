@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Lagos Grill & Lounge</title>
+    <meta name="description" content="View the photo gallery of authentic Nigerian cuisine at Lagos Grill & Lounge in Joliet.">
+    <link rel="icon" href="LagL.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-header {
+            padding: 150px 20px 60px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--primary-bg), var(--secondary-bg));
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 20px 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            background-color: var(--primary-bg);
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform var(--transition-speed);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-orange);
+        }
+
+        .gallery-img-wrapper {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+
+        .gallery-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .gallery-info h3 {
+            font-size: 1.2rem;
+            color: var(--text-main);
+            margin: 0;
+            font-family: var(--font-heading);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Header -->
+    <header class="header scrolled" id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="LagL.png" alt="Lagos Grill & Lounge Logo" class="nav-logo">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#menu">Menu</a>
+                <a href="photos.html" style="color: var(--accent-orange);">Photos</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://www.ubereats.com/store/olarry-asun-spot/aKDC5poXXHGEMWkK_634oA" target="_blank" rel="noopener noreferrer" class="btn btn-uber">Uber Eats</a>
+                <a href="https://www.doordash.com/store/lagos-grill-and-lounge-joliet-39114501/91752149/?event_type=autocomplete&pickup=false" target="_blank" rel="noopener noreferrer" class="btn btn-doordash">DoorDash</a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Mobile Nav overlay -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html#menu" class="mobile-link">Menu</a>
+            <a href="photos.html" class="mobile-link" style="color: var(--accent-orange);">Photos</a>
+            <a href="index.html#about" class="mobile-link">About</a>
+            <a href="index.html#contact" class="mobile-link">Contact</a>
+            <div class="mobile-actions">
+                <a href="https://www.ubereats.com/store/olarry-asun-spot/aKDC5poXXHGEMWkK_634oA" target="_blank" rel="noopener noreferrer" class="btn btn-uber">Uber Eats</a>
+                <a href="https://www.doordash.com/store/lagos-grill-and-lounge-joliet-39114501/91752149/?event_type=autocomplete&pickup=false" target="_blank" rel="noopener noreferrer" class="btn btn-doordash">DoorDash</a>
+                <a href="tel:+16306770051" class="btn btn-primary">Call Now</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="gallery-header slide-up">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 3.5rem;">Our Dishes</h1>
+            <div class="underline"></div>
+            <p style="color: var(--text-muted); margin-top: 20px; font-size: 1.2rem;">A glimpse into our authentic Nigerian flavors, made fresh daily.</p>
+        </div>
+    </div>
+
+    <section class="gallery-section">
+        <div class="gallery-grid">
+            <div class="gallery-item slide-up">
+                <div class="gallery-img-wrapper">
+                    <img src="ChickensuyaColeslaw.jpg" alt="Chicken Suya Coleslaw" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3>Chicken Suya Coleslaw</h3>
+                </div>
+            </div>
+            
+            <div class="gallery-item slide-up">
+                <div class="gallery-img-wrapper">
+                    <img src="Goat_Plaintain_Yam.jpg" alt="Goat Meat, Plantain & Yam" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3>Goat Meat, Plantain & Yam</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item slide-up">
+                <div class="gallery-img-wrapper">
+                    <img src="SuyaJollofSpinachPlaintain.jpg" alt="Suya Jollof Spinach Plantain" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3>Suya Jollof Spinach Plantain</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item slide-up">
+                <div class="gallery-img-wrapper">
+                    <img src="TilapiaJollof.jpg" alt="Tilapia Jollof" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3>Tilapia Jollof</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item slide-up">
+                <div class="gallery-img-wrapper">
+                    <img src="TilapiaPepperSoup.jpg" alt="Tilapia Pepper Soup" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3>Tilapia Pepper Soup</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item slide-up">
+                <div class="gallery-img-wrapper">
+                    <img src="TilapiaPlantain.jpg" alt="Tilapia Plantain" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3>Tilapia Plantain</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item slide-up">
+                <div class="gallery-img-wrapper">
+                    <img src="TurkeyPepperSoup.jpg" alt="Turkey Pepper Soup" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3>Turkey Pepper Soup</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item slide-up">
+                <div class="gallery-img-wrapper">
+                    <img src="TurkeyWing.jpg" alt="Turkey Wing" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3>Turkey Wing</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item slide-up">
+                <div class="gallery-img-wrapper">
+                    <img src="TurkeysuyaPlantainJollof.jpg" alt="Turkey Suya Plantain Jollof" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3>Turkey Suya Plantain Jollof</h3>
+                </div>
+            </div>
+            
+            <div class="gallery-item slide-up">
+                <div class="gallery-img-wrapper">
+                    <img src="TableSpread.jpg" alt="Table Spread Feast" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3>Table Spread Feast</h3>
+                </div>
+            </div>
+            
+            <div class="gallery-item slide-up">
+                <div class="gallery-img-wrapper">
+                    <img src="Snapchat-2010624481.jpg" alt="Lagos Grill Special" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3>Lagos Grill Special</h3>
+                </div>
+            </div>
+            
+            <div class="gallery-item slide-up">
+                <div class="gallery-img-wrapper">
+                    <img src="Snapchat-2084580836.jpg" alt="Fresh from the Grill" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3>Fresh from the Grill</h3>
+                </div>
+            </div>
+            
+            <div class="gallery-item slide-up">
+                <div class="gallery-img-wrapper">
+                    <img src="Snapchat-2120036281.jpg" alt="Authentic Asun" class="gallery-img">
+                </div>
+                <div class="gallery-info">
+                    <h3>Authentic Asun</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="LagL.png" alt="Lagos Grill & Lounge Logo" class="footer-logo">
+                <p>Authentic Nigerian Cuisine in Joliet</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="index.html#menu">Menu</a>
+                <a href="photos.html">Photos</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-order">
+                <h4>Order Now</h4>
+                <a href="https://www.ubereats.com/store/olarry-asun-spot/aKDC5poXXHGEMWkK_634oA" target="_blank" rel="noopener noreferrer">Uber Eats</a>
+                <a href="https://www.doordash.com/store/lagos-grill-and-lounge-joliet-39114501/91752149/?event_type=autocomplete&pickup=false" target="_blank" rel="noopener noreferrer">DoorDash</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lagos Grill & Lounge. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
