@@ -260,13 +260,12 @@ h3 {
    ========================================= */
 .hero {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 20px;
+    padding: 120px 20px 60px;
     background-image: url('TableSpread.jpg');
     background-size: cover;
     background-position: center;
@@ -318,7 +317,7 @@ h3 {
     gap: 10px;
     font-weight: 500;
     font-size: 1.1rem;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
 }
@@ -335,7 +334,7 @@ h3 {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--text-main);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     background: rgba(217, 56, 30, 0.8);
     padding: 5px 15px;
     border-radius: 20px;
