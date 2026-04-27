@@ -55,4 +55,53 @@ document.addEventListener('DOMContentLoaded', () => {
     slideUpElements.forEach(el => {
         observer.observe(el);
     });
+    // 4. Web3Forms AJAX Submission
+    const form = document.getElementById('contactForm');
+    const result = document.getElementById('formResult');
+    const formContainer = document.getElementById('formContainer');
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            result.innerHTML = "Sending...";
+            result.classList.remove('hidden', 'success', 'error');
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = "Message sent successfully!";
+                    result.classList.add('success');
+                    formContainer.classList.add('form-success-state');
+                    form.reset();
+                    
+                    // Optional: remove the highlight after a few seconds
+                    setTimeout(() => {
+                        formContainer.classList.remove('form-success-state');
+                        result.classList.add('hidden');
+                    }, 5000);
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                    result.classList.add('error');
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+                result.classList.add('error');
+            });
+        });
+    }
 });

@@ -629,6 +629,37 @@ h3 {
     transform: translateY(-2px);
 }
 
+/* Form AJAX Success State */
+.contact-form-container.form-success-state {
+    border: 2px solid #06C167;
+    background-color: rgba(6, 193, 103, 0.05);
+    box-shadow: 0 0 20px rgba(6, 193, 103, 0.2);
+    transition: all 0.5s ease;
+}
+
+.form-result {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.form-result.success {
+    color: #06C167;
+    background-color: rgba(6, 193, 103, 0.1);
+}
+
+.form-result.error {
+    color: var(--accent-red);
+    background-color: rgba(217, 56, 30, 0.1);
+}
+
+.hidden {
+    display: none !important;
+}
+
 /* =========================================
    FOOTER
    ========================================= */
