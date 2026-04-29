@@ -829,8 +829,28 @@ h3 {
     }
     
     .footer-content {
-        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
     }
+}
+
+/* =========================================
+   SOCIAL ICONS
+   ========================================= */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: var(--text-muted);
+    transition: color var(--transition-speed), transform var(--transition-speed);
+    display: inline-flex;
+}
+
+.social-icons a:hover {
+    color: var(--accent-orange);
+    transform: translateY(-3px);
 }
 
 @media (min-width: 992px) {
