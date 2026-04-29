@@ -502,7 +502,6 @@ h3 {
 .full-menu-img {
     width: 100%;
     height: auto;
-    cursor: zoom-in;
     transition: transform var(--transition-speed);
 }
 
