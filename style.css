@@ -373,6 +373,49 @@ h3 {
 }
 
 /* =========================================
+   FOOD TRUCK BANNER
+   ========================================= */
+.food-truck-banner {
+    background: linear-gradient(135deg, var(--secondary-bg), #1a1a1a);
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--accent-orange);
+}
+
+.truck-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.truck-subtitle {
+    color: var(--accent-orange);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.truck-details {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 25px 40px;
+    border-radius: var(--card-radius);
+    display: inline-block;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+}
+
+.truck-schedule p {
+    margin-bottom: 12px;
+    color: var(--text-main);
+    font-size: 1.15rem;
+}
+
+.truck-schedule p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
    CATERING BANNER
    ========================================= */
 .catering-banner {
