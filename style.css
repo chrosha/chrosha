@@ -123,6 +123,16 @@ h3 {
     transform: translateY(-2px);
 }
 
+.btn-grubhub {
+    background-color: #FF8000;
+    color: white;
+}
+
+.btn-grubhub:hover {
+    background-color: #E67300;
+    transform: translateY(-2px);
+}
+
 .btn-large {
     padding: 14px 32px;
     font-size: 1.1rem;
