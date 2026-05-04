@@ -586,6 +586,51 @@ h3 {
     color: var(--text-main);
 }
 
+/* =========================================
+   LEGAL PAGES
+   ========================================= */
+.legal-section {
+    padding: 150px 20px 80px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.legal-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+    text-align: center;
+}
+
+.legal-section .last-updated {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+}
+
+.legal-section h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: var(--accent-orange);
+    font-size: 1.5rem;
+}
+
+.legal-section p, .legal-section ul {
+    margin-bottom: 20px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.legal-section ul {
+    padding-left: 25px;
+}
+
+.legal-section li {
+    margin-bottom: 8px;
+}
+
 .about-image-wrapper {
     border-radius: var(--card-radius);
     overflow: hidden;
